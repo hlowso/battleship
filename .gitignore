@@ -1,0 +1,5 @@
+# The pdfs directory contains the project details
+pdfs
+
+# Node modules contains middleware and other packages
+node_modules

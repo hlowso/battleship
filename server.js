@@ -34,6 +34,11 @@ app.get('/play', (req, res) => {
   res.render('play');
 });
 
+app.post('/play', (req, res) => {
+  console.log(req.body);
+  res.render('play', { coords: req.body.coords });
+});
+
 app.listen(PORT, () => {
   console.log(`Battleship app listening on port ${PORT}`);
 });

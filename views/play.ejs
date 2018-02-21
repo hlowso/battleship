@@ -5,7 +5,7 @@
   <style>
   	#p2-5 {
   		background-color: red;
-  	}
+  	}	
 	</style>
 </head>
 <body>
@@ -13,14 +13,20 @@
 	  <% include ./partials/_header %>
 	 	
 	  <div class="opponent_desk">
-	  	<div class="opponent_board"></div>
+	  	<div class="opponent_board">
+	  		<% for(let x = 0; x < 10; x++) { %>
+	  			<% for(let y = 0; y < 10; y ++) { %>
+	  				<div class="tile" id="o<%=x%>-<%=y%>"></div>
+	  			<% } %>
+	  		<% } %>
+	  	</div>
 	  </div>
 
 	  <div class="player_desk">
 	  	<div class="player_board">
 	  		<% for(let x = 0; x < 10; x++) { %>
 	  			<% for(let y = 0; y < 10; y ++) { %>
-	  				<div id="p<%=x%>-<%=y%>"></div>
+	  				<div class="tile" id="p<%=x%>-<%=y%>" onclick="attack(<%=x%>,<%=y%>)"></div>
 	  			<% } %>
 	  		<% } %>
 	  	</div>
@@ -29,5 +35,13 @@
 
 	  <% include ./partials/_footer %>
 
+	<script>
+		function attack(x, y) {
+			var form = $(`<form action="/play" method="post"><input type="hidden" name="coords" value="${x},${y}" />' +
+			  '</form>`);
+			$('body').append(form);
+			form.submit();
+		}
+	</script>
 </body>
 </html>

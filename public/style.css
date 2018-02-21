@@ -26,7 +26,7 @@ header {
   display: grid;
   position: relative;
   float: right;
-  right: 15%;
+  right: 10%;
   grid-template-columns: repeat(10, 35px);
   grid-template-rows: repeat(10, 35px);
 }
@@ -35,9 +35,15 @@ header {
   display: grid;
   position: relative;
   float: left;
-  left: 15%;
+  left: 10%;
   grid-template-columns: repeat(10, 35px);
   grid-template-rows: repeat(10, 35px);
+}
+
+.tile {
+  border-style: solid;
+  border-color: grey;
+  border-width: 2px;
 }
 
 footer {

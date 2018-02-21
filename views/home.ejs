@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <% include ./partials/_header %>
+  <% include ./partials/_head %>
 </head>
 <body>
-  <center>
-	  <% include ./partials/_title %>
-	  <h3>Welcome <%= username %>! </h3>
-	  <h2>(LEADERBOARD GOES HERE)</h2>
-	  <form action="/play" method="GET" style="margin:150px;">
-	  	<input type="submit" value="New Game">
-	  </form>
-  </center>
+<center>
+  <% include ./partials/_header %>
+  <h3>Welcome <%= username %>! </h3>
+  <h2>(LEADERBOARD GOES HERE)</h2>
+  <form action="/play" method="GET" style="margin:150px;">
+  	<input type="submit" value="New Game">
+  </form>
+  <% include ./partials/_footer %>
+</center>
 </body>
 </html>

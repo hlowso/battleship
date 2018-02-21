@@ -1,0 +1,23 @@
+body {
+	font-family: "Courier New";
+	flex-flow: column;
+}
+
+header {
+  padding: 15px;
+  font-size: 200%;
+}
+
+.opponent_desk {
+  float: left;
+  height: 400px;
+}
+
+.player_desk {
+  float: right;
+  height: 400px;
+}
+
+footer {
+  clear: both;
+}

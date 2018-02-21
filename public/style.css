@@ -10,12 +10,34 @@ header {
 
 .opponent_desk {
   float: left;
+  padding: 0;
+  width: 50%;
   height: 400px;
 }
 
 .player_desk {
   float: right;
+  padding: 0;
+  width: 50%;
   height: 400px;
+}
+
+.opponent_board {
+  display: grid;
+  position: relative;
+  float: right;
+  right: 15%;
+  grid-template-columns: repeat(10, 35px);
+  grid-template-rows: repeat(10, 35px);
+}
+
+.player_board {
+  display: grid;
+  position: relative;
+  float: left;
+  left: 15%;
+  grid-template-columns: repeat(10, 35px);
+  grid-template-rows: repeat(10, 35px);
 }
 
 footer {

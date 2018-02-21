@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
   <% include ./partials/_head %>
+  <style>
+  	#p2-5 {
+  		background-color: red;
+  	}
+	</style>
 </head>
 <body>
-<center>
 
 	  <% include ./partials/_header %>
-</center>
 	 	
 	  <div class="opponent_desk">
-	  	<h2>OPP DESK HERE</h2>
+	  	<div class="opponent_board"></div>
 	  </div>
 
 	  <div class="player_desk">
-	  	<h2>PLAYER DESK HERE</h2>
+	  	<div class="player_board">
+	  		<% for(let x = 0; x < 10; x++) { %>
+	  			<% for(let y = 0; y < 10; y ++) { %>
+	  				<div id="p<%=x%>-<%=y%>"></div>
+	  			<% } %>
+	  		<% } %>
+	  	</div>
 	  </div>
 
-<center>
+
 	  <% include ./partials/_footer %>
-</center>
+
 </body>
 </html>
